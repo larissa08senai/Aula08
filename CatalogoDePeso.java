@@ -5,14 +5,14 @@ import java.util.Scanner;
 public class CatalogoDePeso {
   public static void main(String[] args) {
 	//DEFININDO VARIAVEIS
-	  boleano sexo;
+	  string sexo;
 	  double valor;
 	  
 	  //SCANNER
 	  Scanner ler = new Scanner(System.in);
 	  
 	  System.out.println("qual é seu genero sexual? ");
-	  sexo = ler.nextBoolean();
+	  sexo = ler.toString();
 	  
 	  if (sexo != "feminino" || sexo != "masculino") {
 		System.out.println("Por favor coloque um genero valido na liga");
@@ -42,6 +42,9 @@ public class CatalogoDePeso {
 		
 	}
 	  if (sexo == "masculino") {
+		  System.out.println("Qual é seu peso? ");
+		  valor = ler.nextDouble();
+		  
 		  if (valor <= 56.7) {
 			  System.out.println("Você esta na categoria peso mosca");
 			  
